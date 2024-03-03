@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment six</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header section start -->
+
+    <header class="max-w-6xl mx-auto sm:my-5 xl:px-0 px-5">
+      <div class="flex justify-between items-center">
+        <img class="lg:w-auto w-20" src="image/logo.png" alt="" />
+
+        <div>
+          <div class="navbar bg-base-100 sm:hidden block">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn btn-ghost btn-circle"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-5 -ml-14 z-[1] p-2 shadow bg-base-100 rounded-box w-28"
+                >
+                  <li><a>Homepage</a></li>
+                  <li><a>Portfolio</a></li>
+                  <li><a>About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sm:block hidden">
+            <div class="flex items-center gap-5">
+              <div
+                title="Home"
+                class="bg-gray-100 hover:bg-gray-200 duration-150 delay-150 size-10 rounded-full cursor-pointer flex items-center justify-center"
+              >
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div
+                title="edit"
+                class="bg-gray-100 hover:bg-gray-200 duration-150 delay-150 size-10 rounded-full cursor-pointer flex items-center justify-center"
+              >
+                <i class="fa-solid fa-pencil"></i>
+              </div>
+              <div
+                title="add"
+                class="bg-gray-100 hover:bg-gray-200 duration-150 delay-150 size-10 rounded-full cursor-pointer flex items-center justify-center"
+              >
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <div
+                title="flag"
+                class="bg-gray-100 hover:bg-gray-200 duration-150 delay-150 size-10 rounded-full cursor-pointer flex items-center justify-center"
+              >
+                <i class="fa-regular fa-flag"></i>
+              </div>
+              <div>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 duration-150 delay-150 text-white px-7 py-2 rounded-full text-md font-semibold"
+                >
+                  Sign In
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <main class="max-w-6xl mx-auto xl:px-0 px-5">
+      <!-- banner section start -->
+      <section
+        class="lg:h-[500px] rounded-3xl sm:py-20 py-10 relative bg-[#12132D]"
+      >
+        <div class="absolute bottom-0">
+          <img class="max-w-full" src="image/bgbanner.png" alt="" />
+        </div>
+        <div
+          class="flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-center xl:px-28 px-10"
+        >
+          <div class="flex flex-col lg:gap-8 gap-5 lg:w-6/12">
+            <h2
+              class="text-white lg:text-5xl sm:text-3xl text-xl font-bold lg:text-start text-center"
+            >
+              Welcome to the
+              <span class="lg:block leading-snug"
+                ><span class="text-blue-600">ReTro</span> Forum</span
+              >
+            </h2>
+            <p class="text-lg text-gray-300 lg:text-start text-center">
+              Share your favorite opinion and win and wp
+              <span class="lg:block">forum coffee mug!</span>
+            </p>
+
+            <div class="relative flex lg:ml-0 sm:ml-24">
+              <input
+                id="input-field"
+                class="sm:w-9/12 w-full relative rounded-full outline-none h-12 pl-5 pr-28 text-sm"
+                type="text"
+                placeholder="Search here anything"
+              />
+              <button
+                onclick="searchHandler()"
+                class="absolute bg-blue-500 hover:bg-blue-600 duration-150 delay-150 text-white sm:px-10 px-6 h-11 rounded-full text-md font-medium xl:right-32 lg:right-36 sm:right-28 right-2 mt-0.5"
+              >
+                search
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-10 h-60 rounded-xl lg:w-4/12 md:w-5/12 sm:w-6/12 w-full text-[#12132DCC] flex flex-col gap-3"
+          >
+            <div class="flex justify-between">
+              <h4>Registered Users</h4>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between">
+              <h4>Forum</h4>
+              <p>05</p>
+            </div>
+            <div class="flex justify-between">
+              <h4>Topics 01</h4>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between">
+              <h4>Replies</h4>
+              <p>01</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner section end -->
+
+      <!-- Let’s Discuss start -->
+      <section class="sm:my-16 my-10">
+        <div class="text-center">
+          <h1 class="sm:text-3xl text-2xl font-bold">Let’s Discuss</h1>
+          <p class="text-[#12132D99] text-base mt-2">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated
+            <span class="md:block"
+              >testing features allow for a streamlined .</span
+            >
+          </p>
+        </div>
+        <div id="loading-spinner" class="text-center mt-8 hidden">
+          <span class="loading loading-spinner text-error"></span>
+        </div>
+        <div class="flex lg:flex-row flex-col mt-12 gap-5">
+          <div id="lets-discuss-section" class="flex flex-col gap-5"></div>
+          <div class="lg:w-5/12 p-5 rounded-2xl flex flex-col gap-5">
+            <div class="flex justify-between items-center">
+              <h2 class="text-xl font-semibold">Title</h2>
+
+              <h4 class="flex items-center gap-2 text-[#12132D99] font-medium">
+                <img src="image/Vector (1).png" alt="" /> Mark as read
+                <span id="countNumber">(0)</span>
+              </h4>
+            </div>
+
+            <div   id="title-discus" class="space-y-3">
+              <div
+            
+              class="bg-white shadow p-4 flex items-center xl:gap-5 gap-4 rounded-xl justify-between"
+            >
+              <h3 class="sm:text-base text-sm font-semibold">
+                10 Kids Unaware of Their Halloween Costume
+              </h3>
+              <div class="flex items-center gap-2">
+                <img src="image/tabler-icon-eye.png" alt="" />
+                <p class="text-base text-[#12132D99]">1,568</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Let’s Discuss end -->
+
+      <!-- Join Our Forum start -->
+      <section
+        class="bg-[#12132D] md:py-5 py-8 lg:pl-20 md:pl-8 md:px-0 px-10 rounded-3xl"
+      >
+        <div
+          class="flex md:flex-row flex-col items-center justify-between xl:gap-0 md:gap-5 gap-12"
+        >
+          <div class="flex flex-col gap-7 md:text-start text-center">
+            <h1 class="sm:text-3xl text-xl font-bold text-white">
+              Join Our Forum
+            </h1>
+            <h3 class="text-[#FFFFFFCC] leading-7">
+              Share your favorite opinion and win and wp forum coffee mug! Yes,
+              you can
+              <span class="xl:block">
+                run unit tests and view the results directly within the
+                app.</span
+              >
+            </h3>
+            <div>
+              <button
+                class="bg-blue-500 hover:bg-blue-600 duration-150 delay-150 text-white px-7 py-2 rounded-full text-md font-semibold"
+              >
+                Registered Now
+              </button>
+            </div>
+          </div>
+          <img class="mr-5" src="image/joinforum.png" alt="" />
+        </div>
+      </section>
+      <!-- Join Our Forum end -->
+
+      <!-- Latest Posts start -->
+      <section class="sm:my-16 my-10">
+        <div>
+          <div class="text-center">
+            <h1 class="sm:text-3xl text-2xl font-bold">Latest Posts</h1>
+            <p class="text-[#12132D99] text-base mt-2">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated
+              <span class="md:block"
+                >testing features allow for a streamlined .</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="latest-posts-section"
+          class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 mt-14"
+        ></div>
+      </section>
+      <!-- Latest Posts end -->
+    </main>
+
+    <!-- footer section start -->
+    <footer class="footer-center space-y-7 p-10 bg-base-200">
+      <a class="sm:text-3xl text-2xl font-bold" href="#">Retro</a>
+      <p class="text-[#12132DB3] text-base leading-6">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a
+        <span class="md:block"
+          >piece of classical Latin literature from 45 BC</span
+        >
+      </p>
+
+      <div class="flex items-center gap-5 justify-center">
+        <img src="image/1.png" alt="" />
+        <img src="image/2.png" alt="" />
+        <img src="image/logo-instagram 1.png" alt="" />
+        <img src="image/Group (1).png" alt="" />
+      </div>
+      <div class="w-7/12 mx-auto border-y border-dashed"></div>
+
+      <aside>
+        <p class="text-[#12132D80] text-base">2017, All Rights Reserved.</p>
+      </aside>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
